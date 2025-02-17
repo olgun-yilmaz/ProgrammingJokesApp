@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -34,7 +35,8 @@ fun JokeRow(joke: String) {
             fontSize = 24.sp,
             fontWeight = FontWeight.Medium
         )
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(8.dp)
+            .padding(5.dp))
     }
 
 }
@@ -43,6 +45,7 @@ fun JokeRow(joke: String) {
 fun JokeList(jokes: MutableState<List<Joke>>) {
     LazyColumn(
         modifier = Modifier
+            .padding(22.dp)
             .fillMaxSize()
             .background(color = MaterialTheme.colorScheme.secondaryContainer),
         horizontalAlignment = Alignment.CenterHorizontally,

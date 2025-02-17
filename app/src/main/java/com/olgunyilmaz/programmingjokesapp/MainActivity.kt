@@ -53,11 +53,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-
-@Preview(showBackground = true)
-@Composable
-fun JokeRowPreview() {
-    ProgrammingJokesAppTheme {
-    }
-}
